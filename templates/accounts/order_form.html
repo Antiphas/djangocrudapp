@@ -1,0 +1,18 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block title %}
+    Create Order
+{% endblock %}
+
+{% block content %}
+<br><br>
+<hr>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form }}
+
+        <input type="submit" value="Submit" class="btn btn-sm btn-success">
+        <button type="submit"  class="btn btn-sm btn-warning"><a href="{% url 'accounts:home' %}" style="text-decoration:none;">Cancel</a></button>
+    </form>
+{% endblock %}
